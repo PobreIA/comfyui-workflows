@@ -17,6 +17,7 @@ Actualmente te comparto Flujos de Trabajo para ComfyUI altamente optimizados par
 | **Flux 2 Klein 4B GGUF T2i** | Edición de imagen mediante Text to image (Solo texto) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=n3Tjr18E00w) |
 | **Z Image Turbo GGUF Ollama** | Generar imágenes con prompts optimizadas (Ollama) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=4AaEvtyNDhI) |
 | **Z Image Turbo GGUF Controlnet** | Uso de ZiT Controlnet Turbo Fun Union 2.1 (Canny/OpenPose) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=ULvhNbhS6TY) |
+| **Qwen3 TTS 1.7B Optimizado** | Genera y Clona voces fácil mediante Text To Speech (Qwen3TTS) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=8_4-QSTGfqc) |
 
 ---
 
