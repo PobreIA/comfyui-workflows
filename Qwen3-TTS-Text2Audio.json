@@ -1,0 +1,977 @@
+{
+  "id": "cd732cf0-c62d-4c2d-998a-e0e40c8464c5",
+  "revision": 0,
+  "last_node_id": 45,
+  "last_link_id": 61,
+  "nodes": [
+    {
+      "id": 39,
+      "type": "FB_Qwen3TTSCustomVoice",
+      "pos": [
+        -283.47550945431954,
+        -376.6637651131772
+      ],
+      "size": [
+        410,
+        600
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        },
+        {
+          "label": "speaker",
+          "name": "speaker",
+          "type": "COMBO",
+          "widget": {
+            "name": "speaker"
+          },
+          "link": null
+        },
+        {
+          "label": "model_choice",
+          "name": "model_choice",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_choice"
+          },
+          "link": null
+        },
+        {
+          "label": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "label": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          },
+          "link": null
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          },
+          "link": null
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "label": "instruct",
+          "name": "instruct",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "instruct"
+          },
+          "link": null
+        },
+        {
+          "label": "max_new_tokens",
+          "name": "max_new_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          },
+          "link": null
+        },
+        {
+          "label": "top_p",
+          "name": "top_p",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "label": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "label": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "label": "repetition_penalty",
+          "name": "repetition_penalty",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "label": "attention",
+          "name": "attention",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        },
+        {
+          "label": "unload_model_after_generate",
+          "name": "unload_model_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_model_after_generate"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "qwen3-tts-comfyui",
+        "ver": "c7db6c2eb0f269d358c53bb71688dc95de4f7d07",
+        "Node name for S&R": "FB_Qwen3TTSCustomVoice",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "Vivian",
+        "1.7B",
+        "auto",
+        "bf16",
+        "Spanish",
+        885001935885642,
+        "randomize",
+        "",
+        2048,
+        0.85,
+        20,
+        0.9,
+        1.1,
+        "sdpa",
+        false,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "text": "",
+        "speaker": "Vivian",
+        "model_choice": "1.7B",
+        "device": "auto",
+        "precision": "bf16",
+        "language": "Spanish",
+        "seed": 885001935885642,
+        "control_after_generate": "randomize",
+        "instruct": "",
+        "max_new_tokens": 2048,
+        "top_p": 0.85,
+        "top_k": 20,
+        "temperature": 0.9,
+        "repetition_penalty": 1.1,
+        "attention": "sdpa",
+        "unload_model_after_generate": false,
+        "custom_model_path": "",
+        "custom_speaker_name": ""
+      }
+    },
+    {
+      "id": 42,
+      "type": "SaveAudioAdvanced",
+      "pos": [
+        -1000.1822308143097,
+        -187.22502905359445
+      ],
+      "size": [
+        266.5303007850122,
+        160
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "SaveAudioAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true,
+            "format": true,
+            "format.quality": true,
+            "audioUI": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "audio/voz",
+        "mp3",
+        "V0"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/voz",
+        "format": "mp3",
+        "format.quality": "V0"
+      }
+    },
+    {
+      "id": 38,
+      "type": "FB_Qwen3TTSVoiceDesign",
+      "pos": [
+        148.6953368836009,
+        -386.55942463262596
+      ],
+      "size": [
+        400,
+        580
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        },
+        {
+          "label": "instruct",
+          "name": "instruct",
+          "type": "STRING",
+          "widget": {
+            "name": "instruct"
+          },
+          "link": null
+        },
+        {
+          "label": "model_choice",
+          "name": "model_choice",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_choice"
+          },
+          "link": null
+        },
+        {
+          "label": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "label": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          },
+          "link": null
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          },
+          "link": null
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "label": "max_new_tokens",
+          "name": "max_new_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          },
+          "link": null
+        },
+        {
+          "label": "top_p",
+          "name": "top_p",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "label": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "label": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "label": "repetition_penalty",
+          "name": "repetition_penalty",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "label": "attention",
+          "name": "attention",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        },
+        {
+          "label": "unload_model_after_generate",
+          "name": "unload_model_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_model_after_generate"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "qwen3-tts-comfyui",
+        "ver": "c7db6c2eb0f269d358c53bb71688dc95de4f7d07",
+        "Node name for S&R": "FB_Qwen3TTSVoiceDesign",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Se fue... Guardé todas sus cosas en una caja, pero la casa se siente tan vacía sin su presencia. No sé cómo voy a seguir adelante.",
+        "A native Latin American Spanish speaker with precise pronunciation. Heartbroken, melancholic, slow-paced, sobby, weeping, soft voice with long heavy pauses and a cracking tone.",
+        "1.7B",
+        "auto",
+        "bf16",
+        "Spanish",
+        346006224736372,
+        "randomize",
+        2048,
+        0.85,
+        20,
+        0.9,
+        1.1,
+        "sdpa",
+        false
+      ],
+      "widgets_values_named": {
+        "text": "Se fue... Guardé todas sus cosas en una caja, pero la casa se siente tan vacía sin su presencia. No sé cómo voy a seguir adelante.",
+        "instruct": "A native Latin American Spanish speaker with precise pronunciation. Heartbroken, melancholic, slow-paced, sobby, weeping, soft voice with long heavy pauses and a cracking tone.",
+        "model_choice": "1.7B",
+        "device": "auto",
+        "precision": "bf16",
+        "language": "Spanish",
+        "seed": 346006224736372,
+        "control_after_generate": "randomize",
+        "max_new_tokens": 2048,
+        "top_p": 0.85,
+        "top_k": 20,
+        "temperature": 0.9,
+        "repetition_penalty": 1.1,
+        "attention": "sdpa",
+        "unload_model_after_generate": false
+      }
+    },
+    {
+      "id": 43,
+      "type": "SaveAudioAdvanced",
+      "pos": [
+        561.6278233819974,
+        -386.42057095010165
+      ],
+      "size": [
+        265.5516868175695,
+        160
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "SaveAudioAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true,
+            "format": true,
+            "format.quality": true,
+            "audioUI": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "audio/voz",
+        "mp3",
+        "V0"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/voz",
+        "format": "mp3",
+        "format.quality": "V0"
+      }
+    },
+    {
+      "id": 24,
+      "type": "LoadAudio",
+      "pos": [
+        -999.2732478969078,
+        -366.688446222748
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "LoadAudio",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "audio": true,
+            "audioUI": true,
+            "upload": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "voice_pobre_ia.MP3",
+        null,
+        null
+      ],
+      "widgets_values_named": {
+        "audio": "voice_pobre_ia.MP3",
+        "upload": null
+      }
+    },
+    {
+      "id": 40,
+      "type": "FB_Qwen3TTSVoiceClone",
+      "pos": [
+        -719.2732478969078,
+        -376.688446222748
+      ],
+      "size": [
+        400,
+        600
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "ref_audio",
+          "name": "ref_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 46
+        },
+        {
+          "label": "voice_clone_prompt",
+          "name": "voice_clone_prompt",
+          "shape": 7,
+          "type": "VOICE_CLONE_PROMPT",
+          "link": null
+        },
+        {
+          "label": "target_text",
+          "name": "target_text",
+          "type": "STRING",
+          "widget": {
+            "name": "target_text"
+          },
+          "link": null
+        },
+        {
+          "label": "model_choice",
+          "name": "model_choice",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_choice"
+          },
+          "link": null
+        },
+        {
+          "label": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "label": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          },
+          "link": null
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          },
+          "link": null
+        },
+        {
+          "label": "ref_text",
+          "name": "ref_text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_text"
+          },
+          "link": null
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "label": "max_new_tokens",
+          "name": "max_new_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          },
+          "link": null
+        },
+        {
+          "label": "top_p",
+          "name": "top_p",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "label": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "label": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "label": "repetition_penalty",
+          "name": "repetition_penalty",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "label": "x_vector_only",
+          "name": "x_vector_only",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "x_vector_only"
+          },
+          "link": null
+        },
+        {
+          "label": "attention",
+          "name": "attention",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        },
+        {
+          "label": "unload_model_after_generate",
+          "name": "unload_model_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_model_after_generate"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "qwen3-tts-comfyui",
+        "ver": "c7db6c2eb0f269d358c53bb71688dc95de4f7d07",
+        "Node name for S&R": "FB_Qwen3TTSVoiceClone",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "target_text": true,
+            "model_choice": true,
+            "device": true,
+            "precision": true,
+            "language": true,
+            "ref_text": true,
+            "seed": true,
+            "max_new_tokens": true,
+            "top_p": true,
+            "top_k": true,
+            "temperature": true,
+            "repetition_penalty": true,
+            "x_vector_only": true,
+            "attention": true,
+            "unload_model_after_generate": true,
+            "custom_model_path": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Mantengan estos parámetros en sus generaciones. Luego de varias pruebas, es mi configuración más equilibrada!. Claro que pueden experimentar ustedes mismos. Deja tu buen \"Like\" y suscríbete!",
+        "1.7B",
+        "auto",
+        "bf16",
+        "Spanish",
+        "En el silencio de la red, una nueva inteligencia despierta para transformar para siempre el destino de la humanidad.",
+        220277249489647,
+        "fixed",
+        2048,
+        0.85,
+        20,
+        0.3,
+        1.05,
+        false,
+        "flash_attn",
+        false,
+        ""
+      ],
+      "widgets_values_named": {
+        "target_text": "Mantengan estos parámetros en sus generaciones. Luego de varias pruebas, es mi configuración más equilibrada!. Claro que pueden experimentar ustedes mismos. Deja tu buen \"Like\" y suscríbete!",
+        "model_choice": "1.7B",
+        "device": "auto",
+        "precision": "bf16",
+        "language": "Spanish",
+        "ref_text": "En el silencio de la red, una nueva inteligencia despierta para transformar para siempre el destino de la humanidad.",
+        "seed": 220277249489647,
+        "control_after_generate": "fixed",
+        "max_new_tokens": 2048,
+        "top_p": 0.85,
+        "top_k": 20,
+        "temperature": 0.3,
+        "repetition_penalty": 1.05,
+        "x_vector_only": false,
+        "attention": "flash_attn",
+        "unload_model_after_generate": false,
+        "custom_model_path": ""
+      }
+    }
+  ],
+  "links": [
+    [
+      46,
+      24,
+      0,
+      40,
+      0,
+      "AUDIO"
+    ],
+    [
+      59,
+      40,
+      0,
+      42,
+      0,
+      "AUDIO"
+    ],
+    [
+      61,
+      38,
+      0,
+      43,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Voice Clone (Clonar voz)",
+      "bounding": [
+        -1009.2732478969078,
+        -456.688446222748,
+        713.3362348868227,
+        701.2561427431923
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Custom_Voice (Voz predefinida)",
+      "bounding": [
+        -293.47550945431954,
+        -456.6637651131772,
+        430,
+        700
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Design Voice (Crear voz única)",
+      "bounding": [
+        138.6953368836009,
+        -456.55942463262596,
+        700.0786399660798,
+        699.569431714953
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 1.0152559799477083,
+      "offset": [
+        1238.8569151309107,
+        642.9869390399979
+      ]
+    },
+    "frontendVersion": "1.52.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "38": 6,
+    "39": 6,
+    "40": 6
+  }
+}
