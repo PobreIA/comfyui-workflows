@@ -24,7 +24,7 @@ Actualmente te comparto Flujos de Trabajo para ComfyUI altamente optimizados par
 
 ## 🤖 Modelos y Recursos Utilizados
 
-A continuación encuentras los enlaces de descarga directos para los modelos y herramientas de los workflows (filtrados sin duplicados):
+A continuación encuentra los enlaces de descarga directa para los modelos y herramientas de los workflows:
 
 ### 🧠 Modelos Principales & Diffusion
 * **Flux 2 Klein 4B (GGUF):** [HuggingFace - unsloth/FLUX.2-klein-4B-GGUF](https://huggingface.co/unsloth/FLUX.2-klein-4B-GGUF)
