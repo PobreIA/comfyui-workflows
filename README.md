@@ -18,6 +18,7 @@ Actualmente te comparto Flujos de Trabajo para ComfyUI altamente optimizados par
 | **Z Image Turbo GGUF Ollama** | Generar imágenes con prompts optimizadas (Ollama) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=4AaEvtyNDhI) |
 | **Z Image Turbo GGUF Controlnet** | Uso de ZiT Controlnet Turbo Fun Union 2.1 (Canny/OpenPose) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=ULvhNbhS6TY) |
 | **Qwen3 TTS 1.7B Optimizado** | Genera y Clona voces fácil mediante Text To Speech (Qwen3TTS) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=8_4-QSTGfqc) |
+| **SeedVR2 Upscale GGUF** | Mejora la calidad de tus imágenes, workflow optimizado! (SeedVR2) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=OTxpb5IJe_w) |
 
 ---
 
