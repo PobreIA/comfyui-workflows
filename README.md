@@ -3,7 +3,7 @@
 Bienvenido al repositorio oficial de workflows de **ComfyUI** del canal **[PobreIA](https://www.youtube.com/@PobreIA)**. 
 
 Actualmente te comparto Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB de VRAM, especializados en:
-- Generación y Edición: Flux 2 Klein 4B y Z-Image Turbo (GGUF).
+- Generación y Edición: Flux 2 Klein, Flux 3 Klein, Z-Image Turbo (GGUF y W4A8).
 - Control y Guiado: ControlNet Union 2.1 y LoRAs de reemplazo facial (BFS).
 - IA Local y Prompts: Integración directa con Ollama y Qwen 3.
 
@@ -11,14 +11,17 @@ Actualmente te comparto Flujos de Trabajo para ComfyUI altamente optimizados par
 
 ## 📂 Lista de Workflows Disponibles
 
-| Workflow | Descripción | Requisitos VRAM | Tutorial / Guía |
+| Workflow | Descripción | Requisitos VRAM | Tutorial |
 | :--- | :--- | :--- | :--- |
 | **Flux 2 Klein 4B GGUF Headswap** | Head Swap/Rostros usando LoRA Best-Face-Swap | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=OXcE3ABgSzo) |
 | **Flux 2 Klein 4B GGUF T2i** | Edición de imagen mediante Text to image (Solo texto) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=n3Tjr18E00w) |
+| **Flux 3 Klein w4a8** | Genera súper rápido con FLUX 3, workflow completo (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=9us7qo6RUs0) |
+| **Flux 3 Klein Edit w4a8** | Añade y borra objetos súper rápido con FLUX 3 (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=9us7qo6RUs0) |
+| **Flux 3 Klein Edit bbox w4a8** | Utiliza Bounding Boxes para edición Regional en FLUX 3 (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=9us7qo6RUs0) |
 | **Z Image Turbo GGUF Ollama** | Generar imágenes con prompts optimizadas (Ollama) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=4AaEvtyNDhI) |
 | **Z Image Turbo GGUF Controlnet** | Uso de ZiT Controlnet Turbo Fun Union 2.1 (Canny/OpenPose) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=ULvhNbhS6TY) |
 | **Qwen3 TTS 1.7B Optimizado** | Genera y Clona voces fácil mediante Text To Speech (Qwen3TTS) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=8_4-QSTGfqc) |
-| **SeedVR2 Upscale GGUF** | Mejora la calidad de tus imágenes, workflow optimizado! (SeedVR2) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=OTxpb5IJe_w) |
+| **SeedVR2 Upscale GGUF** | Mejora la calidad de tus imágenes, workflow optimizado (SeedVR2) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=OTxpb5IJe_w) |
 
 ---
 
@@ -28,10 +31,13 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 
 ### 🧠 Modelos Principales & Diffusion
 * **Flux 2 Klein 4B (GGUF):** [HuggingFace - unsloth/FLUX.2-klein-4B-GGUF](https://huggingface.co/unsloth/FLUX.2-klein-4B-GGUF)
+* **Flux 3 Klein (W4A8):** [HuggingFace - realrebelai/Rebels_w4a8s](https://huggingface.co/realrebelai/Rebels_w4a8s/tree/main/FLUX)
 * **Z-Image Turbo (GGUF):** [HuggingFace - jayn7/Z-Image-Turbo-GGUF](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF)
 
 ### 📝 Text Encoders & LLMs
 * **Qwen 3 4B (GGUF):** [HuggingFace - Qwen/Qwen3-4B-GGUF](https://huggingface.co/Qwen/Qwen3-4B-GGUF)
+* **Qwen 3 VL 4B (W4A8):** [HuggingFace - JoaoZaokk/Qwen3-VL-4B-W4A8](https://huggingface.co/JoaoZaokk/Qwen3-VL-4B-W4A8-ConvRot/tree/main)
+* **Qwen 3 5.9B Upsampler (W4A8):** [HuggingFace - black-forest-labs/flux-3-image-klein-comfy](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/tree/main/text_encoders)
 * **Ollama (Prompts locales):** [Ollama Official Download](https://ollama.com/download/windows)
 
 ### 🎨 VAE, LoRA & ControlNet
