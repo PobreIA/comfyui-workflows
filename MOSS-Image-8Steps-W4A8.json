@@ -1,0 +1,792 @@
+{
+  "id": "4bba2a7f-7528-4a93-a099-36d0b5824210",
+  "revision": 0,
+  "last_node_id": 15,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        40,
+        120
+      ],
+      "size": [
+        380,
+        100
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "MOSS-Image-SFT-W4A8-ConvRot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "MOSS-Image-SFT-W4A8-ConvRot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 12,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        41.51207950523558,
+        -6.0018493537883195
+      ],
+      "size": [
+        380,
+        90
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "moss_image-8steps.safetensors",
+        0.7
+      ],
+      "widgets_values_named": {
+        "lora_name": "moss_image-8steps.safetensors",
+        "strength_model": 0.7
+      }
+    },
+    {
+      "id": 10,
+      "type": "CLIPLoader",
+      "pos": [
+        40,
+        257.7621402307594
+      ],
+      "size": [
+        380,
+        120
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            2,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen3.5_9b_w4a8_gptq.safetensors",
+        "moss_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3.5_9b_w4a8_gptq.safetensors",
+        "type": "moss_image",
+        "device": "default"
+      }
+    },
+    {
+      "id": 11,
+      "type": "VAELoader",
+      "pos": [
+        38.5409667172082,
+        413.1037698481
+      ],
+      "size": [
+        377.0513089998459,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae.safetensors"
+      }
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        432.47120545258383,
+        -3.9895202405486696
+      ],
+      "size": [
+        530.2810434057644,
+        204.86534015025433
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "Prompt (positive)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Extreme macro close-up portrait of a majestic adult male Bengal lion standing in the African savannah at golden hour. Ultra-detailed individual hair strands of his dark golden and deep crimson mane, blowing violently in a sudden gust of wind. Microscopic detail on the wet black snout, fine whiskers showing translucency under direct sunlight, and tiny water droplets glistening on his cheek fur. Deep golden-amber eyes with intricate iris patterns, visible veins, reflection of a distant lightning bolt on the cornea. Dramatic volumetric rim lighting, cinematic 8k resolution, photorealistic studio-grade texture, shot on Hasselblad H6D-100c, 100mm macro lens, f/2.8 depth of field, sharp focus on the eye, soft bokeh background of swirling dust and glowing embers."
+      ],
+      "widgets_values_named": {
+        "text": "Extreme macro close-up portrait of a majestic adult male Bengal lion standing in the African savannah at golden hour. Ultra-detailed individual hair strands of his dark golden and deep crimson mane, blowing violently in a sudden gust of wind. Microscopic detail on the wet black snout, fine whiskers showing translucency under direct sunlight, and tiny water droplets glistening on his cheek fur. Deep golden-amber eyes with intricate iris patterns, visible veins, reflection of a distant lightning bolt on the cornea. Dramatic volumetric rim lighting, cinematic 8k resolution, photorealistic studio-grade texture, shot on Hasselblad H6D-100c, 100mm macro lens, f/2.8 depth of field, sharp focus on the eye, soft bokeh background of swirling dust and glowing embers."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncode",
+      "pos": [
+        763.1982516756915,
+        475.02006249650344
+      ],
+      "size": [
+        420,
+        88
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "Prompt (Negative)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 6,
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        724.7992914894013,
+        254.15300765598417
+      ],
+      "size": [
+        234.32670075127157,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "EmptyFlux2LatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        768,
+        960,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 768,
+        "height": 960,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 7,
+      "type": "KSampler",
+      "pos": [
+        433.0221388953598,
+        253.77564020737788
+      ],
+      "size": [
+        284.86397172368606,
+        262
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        266372536516737,
+        "randomize",
+        8,
+        3,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 266372536516737,
+        "control_after_generate": "randomize",
+        "steps": 8,
+        "cfg": 3,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        728.1446710782787,
+        394.6167531898349
+      ],
+      "size": [
+        231.89403067614433,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 10
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        974.7701841188855,
+        -87.6610544440558
+      ],
+      "size": [
+        580.1418967637371,
+        756.0585471635954
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "moss-8steps_lora"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "moss-8steps_lora"
+      }
+    },
+    {
+      "id": 13,
+      "type": "easy promptList",
+      "pos": [
+        -378.3034253779994,
+        -5.687540785894226
+      ],
+      "size": [
+        404.7488963426582,
+        623.1804695874677
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_prompt_list",
+          "shape": 7,
+          "type": "LIST",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_list",
+          "type": "LIST",
+          "links": null
+        },
+        {
+          "name": "prompt_strings",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.4.1",
+        "Node name for S&R": "easy promptList",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Extreme macro close-up portrait of a majestic adult male Bengal lion standing in the African savannah at golden hour. Ultra-detailed individual hair strands of his dark golden and deep crimson mane, blowing violently in a sudden gust of wind. Microscopic detail on the wet black snout, fine whiskers showing translucency under direct sunlight, and tiny water droplets glistening on his cheek fur. Deep golden-amber eyes with intricate iris patterns, visible veins, reflection of a distant lightning bolt on the cornea. Dramatic volumetric rim lighting, cinematic 8k resolution, photorealistic studio-grade texture, shot on Hasselblad H6D-100c, 100mm macro lens, f/2.8 depth of field, sharp focus on the eye, soft bokeh background of swirling dust and glowing embers.",
+        "Extreme macro shot of human face focusing on two hyper-detailed heterochromatic eyes: the left eye is a sharp emerald green with yellow flecks around the pupil, the right eye is a vibrant sapphire blue with intricate crystalline pupil structures. Subsurface scattering on skin, natural skin texture with visible pores, tiny freckles, fine peach fuzz, and individual natural eyelashes with subtle specks of golden dust. Colorful neon prismatic light reflections inside the iris pupil. Shot on 85mm prime lens, ultra-sharp detail, cinematic subsurface illumination, masterwork, photorealistic, 8k resolution, raw photography style, highly detailed.",
+        "A colossal mythical titan emerging from a roaring ocean during twilight, seamlessly constructed from contrasting elements. One arm made of flowing crystal-clear turquoise liquid water holding swirling glowing foam; the other arm formed from fractured dark obsidian basalt rock with glowing orange magma and fire veins beneath the cracks. The torso is covered in bioluminescent emerald moss, ancient oak roots, and blooming lotus flowers. Glowing ethereal light beams radiate from his chest core. Hyper-detailed splash physics, realistic fluid mechanics, volumetric smoke and steam rising from water meeting fire, raytraced reflections, Unreal Engine 5 render style, 8k resolution, epic cinematic lighting, dark dramatic sky with glowing stars.",
+        "A breathtaking cosmic vista of a massive ringed gas giant planet hovering over a neon pink and purple glowing nebula. Intricate planetary rings made of ice crystals and asteroid dust catching cyan light beams. In the foreground, an alien moon with reflective mirror-like frozen lakes reflecting two giant crescent moons and distant cosmic galaxys in the sky. Neon turquoise, magenta, and deep indigo color palette, hyper-detailed cosmic dust clouds, lens flare effects, interstellar scale, space photography, NASA Hubble style mixed with synthwave aesthetic, crisp sharp detail, 8k masterpiece.",
+        "Intricate close-up portrait of a Asian cyberpunk woman standing under futuristic neon rain in a dark Tokyo alleyway at night. She has striking luminous ice-blue eyes with subtle glowing cybernetic HUD overlays etched onto her cornea. Modern asymmetrical holographic silver hair wet from rain, dripping styled strands over her face. Vibrant translucent cyberpunk jacket with glowing optical fibers and neon orange wiring. Colorful neon pink, electric cyan, and acid green billboards reflected on her wet skin and glossy lips. Volumetric fog, chromatic aberration, cinematic bokeh, shot on 35mm lens, moody atmospheric lighting, octane render, photorealistic, cinematic masterpiece."
+      ],
+      "widgets_values_named": {
+        "prompt_1": "Extreme macro close-up portrait of a majestic adult male Bengal lion standing in the African savannah at golden hour. Ultra-detailed individual hair strands of his dark golden and deep crimson mane, blowing violently in a sudden gust of wind. Microscopic detail on the wet black snout, fine whiskers showing translucency under direct sunlight, and tiny water droplets glistening on his cheek fur. Deep golden-amber eyes with intricate iris patterns, visible veins, reflection of a distant lightning bolt on the cornea. Dramatic volumetric rim lighting, cinematic 8k resolution, photorealistic studio-grade texture, shot on Hasselblad H6D-100c, 100mm macro lens, f/2.8 depth of field, sharp focus on the eye, soft bokeh background of swirling dust and glowing embers.",
+        "prompt_2": "Extreme macro shot of human face focusing on two hyper-detailed heterochromatic eyes: the left eye is a sharp emerald green with yellow flecks around the pupil, the right eye is a vibrant sapphire blue with intricate crystalline pupil structures. Subsurface scattering on skin, natural skin texture with visible pores, tiny freckles, fine peach fuzz, and individual natural eyelashes with subtle specks of golden dust. Colorful neon prismatic light reflections inside the iris pupil. Shot on 85mm prime lens, ultra-sharp detail, cinematic subsurface illumination, masterwork, photorealistic, 8k resolution, raw photography style, highly detailed.",
+        "prompt_3": "A colossal mythical titan emerging from a roaring ocean during twilight, seamlessly constructed from contrasting elements. One arm made of flowing crystal-clear turquoise liquid water holding swirling glowing foam; the other arm formed from fractured dark obsidian basalt rock with glowing orange magma and fire veins beneath the cracks. The torso is covered in bioluminescent emerald moss, ancient oak roots, and blooming lotus flowers. Glowing ethereal light beams radiate from his chest core. Hyper-detailed splash physics, realistic fluid mechanics, volumetric smoke and steam rising from water meeting fire, raytraced reflections, Unreal Engine 5 render style, 8k resolution, epic cinematic lighting, dark dramatic sky with glowing stars.",
+        "prompt_4": "A breathtaking cosmic vista of a massive ringed gas giant planet hovering over a neon pink and purple glowing nebula. Intricate planetary rings made of ice crystals and asteroid dust catching cyan light beams. In the foreground, an alien moon with reflective mirror-like frozen lakes reflecting two giant crescent moons and distant cosmic galaxys in the sky. Neon turquoise, magenta, and deep indigo color palette, hyper-detailed cosmic dust clouds, lens flare effects, interstellar scale, space photography, NASA Hubble style mixed with synthwave aesthetic, crisp sharp detail, 8k masterpiece.",
+        "prompt_5": "Intricate close-up portrait of a Asian cyberpunk woman standing under futuristic neon rain in a dark Tokyo alleyway at night. She has striking luminous ice-blue eyes with subtle glowing cybernetic HUD overlays etched onto her cornea. Modern asymmetrical holographic silver hair wet from rain, dripping styled strands over her face. Vibrant translucent cyberpunk jacket with glowing optical fibers and neon orange wiring. Colorful neon pink, electric cyan, and acid green billboards reflected on her wet skin and glossy lips. Volumetric fog, chromatic aberration, cinematic bokeh, shot on 35mm lens, moody atmospheric lighting, octane render, photorealistic, cinematic masterpiece."
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 14,
+      "type": "easy promptList",
+      "pos": [
+        -789.6047667490486,
+        -5.072075256886983
+      ],
+      "size": [
+        402.21891367081207,
+        622.4598490033543
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_prompt_list",
+          "shape": 7,
+          "type": "LIST",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_list",
+          "type": "LIST",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "prompt_strings",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.4.1",
+        "Node name for S&R": "easy promptList",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "An awe-inspiring wide landscape of an untouched tropical paradise beach at dawn. Crystal clear turquoise water with perfect optical transparency, revealing hyper-detailed coral reefs, sea turtles, and golden ripples in the white sand seabed. Golden sunrise light piercing through soft morning fog hanging over dramatic jungle cliffs in the background. Wet smooth black volcanic rocks in the foreground wrapped in soft ocean foam. High dynamic range (HDR), warm sunlight contrasting with cool ocean shadows, atmospheric perspective, ultra-wide angle 16mm lens photography, 8k resolution, hyper-realistic nature photography.",
+        "High-end 3D CGI animation render of an adorable eccentric old clockmaker fox wearing oversized brass goggles on his forehead and a colorful patched velvet vest. Masterful Pixar and DreamWorks style character design. Rich soft fur rendering with realistic fluffiness, expressive large warm brown hazel eyes brimming with curiosity, tiny smiling whiskers. He is holding a tiny, intricate glowing golden pocket watch with floating translucent magic gears. Warm candlelight illumination, cozy wooden workshop full of detailed floating tools in soft bokeh background, subsurface scattering on skin and fur, cinematic lighting, 8k resolution, masterpiece.",
+        "Nostalgic analog film photograph from the late 1970s depicting a young artist sitting on a vintage leather sofa inside a sun-lit retro apartment. Warm golden hour sun beams cutting through dust motes in the air. She is wearing a colorful vintage hand-knit sweater, oversized amber-tinted glasses, and has loose wavy chestnut brown hair illuminated from behind. Background filled with vinyl records, vintage wooden speakers, potted monstera plants, and warm orange wallpaper. Authentic film grain, Kodak Portra 400 aesthetic, soft natural light leaks, muted earthy color palette, warm nostalgic mood, highly atmospheric, cinematic 35mm photograph.",
+        "Masterpiece pixel art 16-bit isometric view of a sprawling cyberpunk metropolis at midnight under heavy rainfall. Ultra-detailed pixel work featuring towering skyscrapers with animated neon signs, flying vehicles leaving light trails, pixelated holographic dragon advertisements floating between buildings. Below, wet street level with glowing puddle reflections, steam rising from sewer grates, and tiny pixelated pedestrians holding colorful glowing umbrellas. Rich dark color palette of deep navy blue, neon magenta, electric cyan, and glowing amber. Precise 8k pixel clarity, nostalgic yet futuristic pixel art aesthetic.",
+        ""
+      ],
+      "widgets_values_named": {
+        "prompt_1": "An awe-inspiring wide landscape of an untouched tropical paradise beach at dawn. Crystal clear turquoise water with perfect optical transparency, revealing hyper-detailed coral reefs, sea turtles, and golden ripples in the white sand seabed. Golden sunrise light piercing through soft morning fog hanging over dramatic jungle cliffs in the background. Wet smooth black volcanic rocks in the foreground wrapped in soft ocean foam. High dynamic range (HDR), warm sunlight contrasting with cool ocean shadows, atmospheric perspective, ultra-wide angle 16mm lens photography, 8k resolution, hyper-realistic nature photography.",
+        "prompt_2": "High-end 3D CGI animation render of an adorable eccentric old clockmaker fox wearing oversized brass goggles on his forehead and a colorful patched velvet vest. Masterful Pixar and DreamWorks style character design. Rich soft fur rendering with realistic fluffiness, expressive large warm brown hazel eyes brimming with curiosity, tiny smiling whiskers. He is holding a tiny, intricate glowing golden pocket watch with floating translucent magic gears. Warm candlelight illumination, cozy wooden workshop full of detailed floating tools in soft bokeh background, subsurface scattering on skin and fur, cinematic lighting, 8k resolution, masterpiece.",
+        "prompt_3": "Nostalgic analog film photograph from the late 1970s depicting a young artist sitting on a vintage leather sofa inside a sun-lit retro apartment. Warm golden hour sun beams cutting through dust motes in the air. She is wearing a colorful vintage hand-knit sweater, oversized amber-tinted glasses, and has loose wavy chestnut brown hair illuminated from behind. Background filled with vinyl records, vintage wooden speakers, potted monstera plants, and warm orange wallpaper. Authentic film grain, Kodak Portra 400 aesthetic, soft natural light leaks, muted earthy color palette, warm nostalgic mood, highly atmospheric, cinematic 35mm photograph.",
+        "prompt_4": "Masterpiece pixel art 16-bit isometric view of a sprawling cyberpunk metropolis at midnight under heavy rainfall. Ultra-detailed pixel work featuring towering skyscrapers with animated neon signs, flying vehicles leaving light trails, pixelated holographic dragon advertisements floating between buildings. Below, wet street level with glowing puddle reflections, steam rising from sewer grates, and tiny pixelated pedestrians holding colorful glowing umbrellas. Rich dark color palette of deep navy blue, neon magenta, electric cyan, and glowing amber. Precise 8k pixel clarity, nostalgic yet futuristic pixel art aesthetic.",
+        "prompt_5": ""
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        39.368495415308935,
+        510.5292188363843
+      ],
+      "size": [
+        380.0195027297061,
+        104.48112573852546
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Si no quieres utilizar el LoRA, haz clic derecho en el nodo Load LoRA y selecciona \"Bypass\". Para este modelo lo ideal son 25 pasos, según lo explicado en el video."
+      ],
+      "widgets_values_named": {
+        "text": "Si no quieres utilizar el LoRA, haz clic derecho en el nodo Load LoRA y selecciona \"Bypass\". Para este modelo lo ideal son 25 pasos, según lo explicado en el video."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      10,
+      0,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      12,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      3,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      4,
+      0,
+      7,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      9,
+      6,
+      0,
+      7,
+      3,
+      "LATENT"
+    ],
+    [
+      10,
+      7,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      11,
+      11,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      12,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      10,
+      0,
+      4,
+      0,
+      "CLIP"
+    ],
+    [
+      15,
+      13,
+      1,
+      3,
+      1,
+      "STRING"
+    ],
+    [
+      16,
+      14,
+      0,
+      13,
+      0,
+      "LIST"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.9571601941747623,
+      "offset": [
+        813.3941937239371,
+        361.1924114473166
+      ]
+    },
+    "frontendVersion": "1.57.1",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "7": 0
+  }
+}
