@@ -3,7 +3,7 @@
 Bienvenido al repositorio oficial de workflows de **ComfyUI** del canal **[PobreIA](https://www.youtube.com/@PobreIA)**. 
 
 Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB de VRAM, enfocados en:
-- Generación y Edición: Flux 2 Klein, Flux 3 Klein, Z-Image Turbo, MOSS (GGUF y W4A8).
+- Generación y Edición: Flux 2 Klein, Flux 3 Klein, Z-Image Turbo, MOSS, Qwen (GGUF y W4A8).
 - Control y Guiado: ControlNet Union 2.1 y LoRAs de reemplazo facial (BFS).
 - IA Local y Prompts: Integración directa con Ollama y Qwen 3.
 
@@ -21,6 +21,8 @@ Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB
 | **Flux 3 Klein Edit bbox w4a8** | Utiliza Bounding Boxes para edición Regional en FLUX 3 (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=9us7qo6RUs0) |
 | **Z Image Turbo GGUF Ollama** | Generar imágenes con prompts optimizadas (Ollama) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=4AaEvtyNDhI) |
 | **Z Image Turbo GGUF Controlnet** | Uso de ZiT Controlnet Turbo Fun Union 2.1 (Canny/OpenPose) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=ULvhNbhS6TY) |
+| **QWEN Image 2.1 W4A8** | Generación de imágenes con modelo Turbo y Base (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=qGacKaCYUzU) |
+| **QWEN Image 2.1 Edit W4A8** | Edición de imágenes, quitar backgrounds con modelo Turbo (W4A8) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=qGacKaCYUzU) |
 | **Qwen3 TTS 1.7B Optimizado** | Genera y Clona voces fácil mediante Text To Speech (Qwen3TTS) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=8_4-QSTGfqc) |
 | **SeedVR2 Upscale GGUF** | Mejora la calidad de tus imágenes, workflow optimizado (SeedVR2) | 4GB - 8GB | [📖 Video YT](https://www.youtube.com/watch?v=OTxpb5IJe_w) |
 
@@ -37,18 +39,22 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **Z-Image Turbo (GGUF):** [HuggingFace - jayn7/Z-Image-Turbo-GGUF](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF)
 * **Z-Image Turbo (W4A8):** [HuggingFace - realrebelai/Rebels_w4a8s - ZiT](https://huggingface.co/realrebelai/Rebels_w4a8s/tree/main/Z-Image)
 * **MOSS Image (GGUF/W4A8):** [HuggingFace - realrebelai/MOSS-Image_GGUFs](https://huggingface.co/realrebelai/MOSS-Image_GGUFs)
+* **Qwen Image 2.1 (W4A8):** [Qwen Image 2.1/Turbo - Civitai](https://civitai.com/models/2951557/qwen-image-21turbo-int4w4a8int6w6a8int8)
+* **Qwen Image 2.1 (GGUF):** [HuggingFace - unsloth/Qwen-Image-2.1-Turbo-GGUF](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF)
 
 ### 📝 Text Encoders & LLMs
 * **Qwen 3 4B (GGUF):** [HuggingFace - Qwen/Qwen3-4B-GGUF](https://huggingface.co/Qwen/Qwen3-4B-GGUF)
 * **Qwen 3 VL 4B (W4A8):** [HuggingFace - JoaoZaokk/Qwen3-VL-4B-W4A8](https://huggingface.co/JoaoZaokk/Qwen3-VL-4B-W4A8-ConvRot/tree/main)
 * **Qwen 3.5 9B (W4A8):** [HuggingFace - Comfy-Org/MOSS-Image](https://huggingface.co/Comfy-Org/MOSS-Image/tree/main/text_encoders)
 * **Qwen 3.5 9B Upsampler (W4A8):** [HuggingFace - black-forest-labs/flux-3-image-klein-comfy](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/tree/main/text_encoders)
+* **Qwen 3.5 8B (W4A8):** [HuggingFace - Comfy-Org/Qwen-Image-2.1/text_encoders](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/text_encoders)
 * **Ollama (Prompts locales):** [Ollama Official Download](https://ollama.com/download/windows)
 
 ### 🎨 VAE, LoRA & ControlNet
 * **VAE Flux (ae.safetensors):** [HuggingFace - Comfy-Org/flux2-dev](https://huggingface.co/Comfy-Org/flux2-dev)
 * **LoRA Best Face Swap (BFS):** [HuggingFace - Alissonerdx/BFS-Best-Face-Swap](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap)
 * **ControlNet Z-Image-Turbo Fun Union 2.1:** [HuggingFace - alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1)
+* **ControlNet Z-Image-Turbo Fun Union 2.1:** [HuggingFace - madebyollin/texture-fix-vae-for-qwen-image-2.1 ](https://huggingface.co/madebyollin/texture-fix-vae-for-qwen-image-2.1/tree/main)
 
 ### 🚀 Upscale, Audio & LipSync
 * **SeedVR2 (Super Resolución / Upscale GGUF):** [HuggingFace - cmeka/SeedVR2-GGUF](https://huggingface.co/cmeka/SeedVR2-GGUF)
