@@ -3,9 +3,9 @@
 Bienvenido al repositorio oficial de workflows de **ComfyUI** del canal **[PobreIA](https://www.youtube.com/@PobreIA)**. 
 
 Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB de VRAM, enfocados en:
-- Generación y Edición: Flux 2 Klein, Flux 3 Klein, Z-Image Turbo, MOSS, Qwen, FIBO 2 (GGUF y W4A8).
+- Generación y Edición: Flux 2 Klein, Flux 3 Klein, Z-Image Turbo, MOSS, Qwen, FIBO 2, Minimax H3 (GGUF, W4A8 y W6A8).
 - Control y Guiado: ControlNet Union 2.1 y LoRAs de reemplazo facial (BFS).
-- IA Local y Prompts: Integración directa con Ollama y Qwen 3.
+- IA Local y Prompts: Integración con Ollama y Qwen 3.
 
 ---
 
@@ -13,6 +13,7 @@ Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB
 
 | Workflow | Descripción | Requisitos VRAM | Tutorial |
 | :--- | :--- | :--- | :--- |
+| **Minimax H3 8 Steps w6a8** | Genera video ultra rápido, workflow super optimizado (W6A8) | 6GB | [📖 Video YT](https://www.youtube.com/watch?v=IPU7erLA19U) |
 | **FIBO 2 Edit Turbo w4a8** | Edita imágenes con calidad increíble en solo 4 pasos (W4A8) | 6GB | [📖 Video YT](https://www.youtube.com/watch?v=sJ6ilKD8SIQ) |
 | **MOSS Image 8Steps W4A8** | Genera imágenes geniales, comparativa 8x25x50 pasos (W4A8) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=UdcntvQpgAU) |
 | **Flux 2 Klein 4B GGUF Headswap** | Head Swap/Rostros usando LoRA Best-Face-Swap | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=OXcE3ABgSzo) |
@@ -43,6 +44,7 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **Qwen Image 2.1 (W4A8):** [Qwen Image 2.1/Turbo - Civitai](https://civitai.com/models/2951557/qwen-image-21turbo-int4w4a8int6w6a8int8)
 * **Qwen Image 2.1 (GGUF):** [HuggingFace - unsloth/Qwen-Image-2.1-Turbo-GGUF](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF)
 * **FIBO 2 Edit Turbo (GGUF/W4A8):** [HuggingFace - realrebelai/Fibo-2.0_GGUFs](https://huggingface.co/realrebelai/Fibo-2.0_GGUFs/tree/main)
+* **MINIMAX H3 PRISM_DMAD_PDMD (W6A8):** [HuggingFace - OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM)
 
 ### 📝 Text Encoders & LLMs
 * **Qwen 3 4B (GGUF):** [HuggingFace - Qwen/Qwen3-4B-GGUF](https://huggingface.co/Qwen/Qwen3-4B-GGUF)
@@ -51,15 +53,18 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **Qwen 3.5 9B Upsampler (W4A8):** [HuggingFace - black-forest-labs/flux-3-image-klein-comfy](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/tree/main/text_encoders)
 * **Qwen 3.5 8B (W4A8):** [HuggingFace - Comfy-Org/Qwen-Image-2.1/text_encoders](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/text_encoders)
 * **Ollama (Prompts locales):** [Ollama Official Download](https://ollama.com/download/windows)
+* **Qwen 3 VL 32B Minimax H3 (NVFP4):** [HuggingFace - Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/)
 
 ### 🎨 VAE, LoRA & ControlNet
 * **VAE Flux (ae.safetensors):** [HuggingFace - Comfy-Org/flux2-dev](https://huggingface.co/Comfy-Org/flux2-dev)
 * **LoRA Best Face Swap (BFS):** [HuggingFace - Alissonerdx/BFS-Best-Face-Swap](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap)
 * **ControlNet Z-Image-Turbo Fun Union 2.1:** [HuggingFace - alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1)
 * **Texture Fix VAE for Qwen Image 2.1:** [HuggingFace - madebyollin/texture-fix-vae-for-qwen-image-2.1 ](https://huggingface.co/madebyollin/texture-fix-vae-for-qwen-image-2.1/tree/main)
+* **Minimax H3 Audio/Video:** [HuggingFace - Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/)
 
 ### 🚀 Upscale, Audio & LipSync
 * **SeedVR2 (Super Resolución / Upscale GGUF):** [HuggingFace - cmeka/SeedVR2-GGUF](https://huggingface.co/cmeka/SeedVR2-GGUF)
+* **NVIDIA RTX Video Super Resolution (Upscale Nativo):** [NVIDIA Broadcast Download Resources | NVIDIA](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/)
 * **Qwen3 TTS 1.7B (Voz y Clonación):** [HuggingFace Collection - Qwen/qwen3-tts](https://huggingface.co/collections/Qwen/qwen3-tts)
 * **ComfyUI-FLOAT (LipSync / Sincronización Labial):** [GitHub - yuvraj108c/ComfyUI-FLOAT](https://github.com/yuvraj108c/ComfyUI-FLOAT)
 
