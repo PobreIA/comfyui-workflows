@@ -25,6 +25,7 @@ Flujos de Trabajo para ComfyUI altamente optimizados para GPUs de 4GB, 6GB y 8GB
 | **Flux 3 Klein Edit bbox w4a8** | Utiliza Bounding Boxes para edición Regional en FLUX 3 (W4A8) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=9us7qo6RUs0) |
 | **Z Image Turbo GGUF Ollama** | Generar imágenes con prompts optimizadas (Ollama) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=4AaEvtyNDhI) |
 | **Z Image Turbo GGUF Controlnet** | Uso de ZiT Controlnet Turbo Fun Union 2.1 (Canny/OpenPose) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=ULvhNbhS6TY) |
+| **KROMA Turbo Image W4A8** | Generar imágenes geniales con solo 4 pasos! Krea 2 + Chroma | 6GB | [📖 Video YT](https://www.youtube.com/watch?v=eHr_m7hdaE8) |
 | **QWEN Image 2.1 W4A8** | Generación de imágenes con modelo Turbo y Base (W4A8) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=qGacKaCYUzU) |
 | **QWEN Image 2.1 Edit W4A8** | Edición de imágenes, quitar backgrounds con modelo Turbo (W4A8) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=qGacKaCYUzU) |
 | **Qwen3 TTS 1.7B Optimizado** | Genera y Clona voces fácil mediante Text To Speech (Qwen3TTS) | 4GB | [📖 Video YT](https://www.youtube.com/watch?v=8_4-QSTGfqc) |
@@ -43,6 +44,8 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **Z-Image Turbo (GGUF):** [HuggingFace - jayn7/Z-Image-Turbo-GGUF](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF)
 * **Z-Image Turbo (W4A8):** [HuggingFace - realrebelai/Rebels_w4a8s - ZiT](https://huggingface.co/realrebelai/Rebels_w4a8s/tree/main/Z-Image)
 * **MOSS Image (GGUF/W4A8):** [HuggingFace - realrebelai/MOSS-Image_GGUFs](https://huggingface.co/realrebelai/MOSS-Image_GGUFs)
+* **KROMA Turbo (W4A8):** [HuggingFace - Clybius/Kroma-Quantizations](https://huggingface.co/Clybius/Kroma-Quantizations/tree/main)
+* **KROMA Turbo (GGUF):** [HuggingFace - Abiray/Kroma-v0.3.1-Turbo-OPD-GGUF](https://huggingface.co/Abiray/Kroma-v0.3.1-Turbo-OPD-GGUF/tree/main)
 * **Qwen Image 2.1 (W4A8):** [Qwen Image 2.1/Turbo - Civitai](https://civitai.com/models/2951557/qwen-image-21turbo-int4w4a8int6w6a8int8)
 * **Qwen Image 2.1 (GGUF):** [HuggingFace - unsloth/Qwen-Image-2.1-Turbo-GGUF](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF)
 * **FIBO 2 Edit Turbo (GGUF/W4A8):** [HuggingFace - realrebelai/Fibo-2.0_GGUFs](https://huggingface.co/realrebelai/Fibo-2.0_GGUFs/tree/main)
@@ -64,6 +67,7 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **LoRA Best Face Swap (BFS):** [HuggingFace - Alissonerdx/BFS-Best-Face-Swap](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap)
 * **ControlNet Z-Image-Turbo Fun Union 2.1:** [HuggingFace - alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1)
 * **Texture Fix VAE for Qwen Image 2.1:** [HuggingFace - madebyollin/texture-fix-vae-for-qwen-image-2.1 ](https://huggingface.co/madebyollin/texture-fix-vae-for-qwen-image-2.1/tree/main)
+* **Wan 2.1:** [HuggingFace - Comfy-Org/Wan-2.1](https://huggingface.co/Comfy-Org/Wan-2.1/tree/main/split_files/vae)
 * **Minimax H3 Audio/Video:** [HuggingFace - Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3/tree/main/vae)
 
 ### 🚀 Upscale, Audio & LipSync
