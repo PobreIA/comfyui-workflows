@@ -49,7 +49,8 @@ A continuación encuentra los enlaces de descarga directa para los modelos y her
 * **Qwen Image 2.1 (W4A8):** [Qwen Image 2.1/Turbo - Civitai](https://civitai.com/models/2951557/qwen-image-21turbo-int4w4a8int6w6a8int8)
 * **Qwen Image 2.1 (GGUF):** [HuggingFace - unsloth/Qwen-Image-2.1-Turbo-GGUF](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF)
 * **FIBO 2 Edit Turbo (GGUF/W4A8):** [HuggingFace - realrebelai/Fibo-2.0_GGUFs](https://huggingface.co/realrebelai/Fibo-2.0_GGUFs/tree/main)
-* **MINIMAX H3 PRISM_DMAD_PDMD (W6A8):** [HuggingFace - OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM)
+* **MINIMAX H3 PRISM_DMAD_PDMD (W6A8):** [HuggingFace - OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM](tps://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM)
+* **MINIMAX H3 TriPRISM TurboFusion (W6A8):** [HuggingFace - OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-SingularityV2-TriPrism-TurboFusion](https://huggingface.co/OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-SingularityV2-TriPrism-TurboFusion/tree/main)
 * **MINIMAX H3 Image (W4A8):** [HuggingFace - Comfy-Org/MiniMax-H3-Image](https://huggingface.co/Comfy-Org/MiniMax-H3-Image/tree/main/diffusion_models) 
 
 ### 📝 Text Encoders & LLMs
